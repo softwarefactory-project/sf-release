@@ -1,8 +1,8 @@
 %global         sum The Software Factory project
 
 Name:           sf-release
-Version:        2.5.0
-Release:        1%{?dist}
+Version:        2.5
+Release:        2%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -23,10 +23,19 @@ Requires:       centos-release-opstools
 
 %install
 install -p -D -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/sf-release.repo
+if [[ %{version} =~ dev ]]; then
+   echo %{version} | sed 's/.*dev/dev/' > %{buildroot}%{_sysconfdir}/sf-release
+else
+   echo %{version} > %{buildroot}%{_sysconfdir}/sf-release
+fi
 
 %files
 %{_sysconfdir}/yum.repos.d/sf-release.repo
+%{_sysconfdir}/sf-release
 
 %changelog
-* Tue Apr 11 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 2.5.0-1
+* Mon Apr 17 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 2.5-2
+- Add sf-release
+
+* Tue Apr 11 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 2.5-1
 - Initial packaging
