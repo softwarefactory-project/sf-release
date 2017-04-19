@@ -1,5 +1,5 @@
 [sfrelease-master]
 name=SF master packages
-baseurl=http://46.231.133.231/kojifiles/repos/sf-master-centos7/
+baseurl=http://46.231.133.231/kojifiles/repos/sf-master-el7/
 gpgcheck=0
 enabled=1

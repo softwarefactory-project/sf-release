@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        2.5
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -34,6 +34,9 @@ fi
 %{_sysconfdir}/sf-release
 
 %changelog
+* Wed Apr 19 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 2.5-3
+- Switch to new koji target el7
+
 * Mon Apr 17 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 2.5-2
 - Add sf-release
 
