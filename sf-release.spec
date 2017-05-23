@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        9999
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -23,17 +23,16 @@ Requires:       centos-release-opstools
 
 %install
 install -p -D -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/sf-release.repo
-if [[ %{version} =~ dev ]]; then
-   echo master > %{buildroot}%{_sysconfdir}/sf-release
-else
-   echo %{version} > %{buildroot}%{_sysconfdir}/sf-release
-fi
+echo master > %{buildroot}%{_sysconfdir}/sf-release
 
 %files
 %{_sysconfdir}/yum.repos.d/sf-release.repo
 %{_sysconfdir}/sf-release
 
 %changelog
+* Tue May 23 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-2
+- Fix typo...
+
 * Tue May 23 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-1
 - Write 'master' to /etc/sf-release
 
