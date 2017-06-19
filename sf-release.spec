@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        9999
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -13,6 +13,7 @@ BuildArch:      noarch
 
 Requires:       centos-release-openstack-newton
 Requires:       centos-release-opstools
+Requires:       centos-release-scl-rh
 
 %description
 %{sum}
@@ -30,6 +31,9 @@ echo master > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Mon Jun 19 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-3
+- Add scl-rh requirement
+
 * Tue May 23 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-2
 - Fix typo...
 
