@@ -1,8 +1,8 @@
 %global         sum The Software Factory project
 
 Name:           sf-release
-Version:        9999
-Release:        3%{?dist}
+Version:        2.6
+Release:        1%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -31,6 +31,9 @@ echo master > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Tue Jul 11 2017 Fabien Boucher <fboucher@redhat.com> - 2.6-1
+- Add scl-rh requirement
+
 * Mon Jun 19 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-3
 - Add scl-rh requirement
 
