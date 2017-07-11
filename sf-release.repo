@@ -1,5 +1,5 @@
-[sfrelease-master]
-name=SF master packages
-baseurl=http://46.231.133.231/kojifiles/repos/sf-master-el7/
+[sfrelease-2.6]
+name=SF 2.6 packages
+baseurl=http://46.231.133.231/kojifiles/repos/sf-2.6-el7-release
 gpgcheck=0
 enabled=1
