@@ -24,7 +24,7 @@ Requires:       centos-release-scl-rh
 
 %install
 install -p -D -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/sf-release.repo
-echo master > %{buildroot}%{_sysconfdir}/sf-release
+echo 2.6 > %{buildroot}%{_sysconfdir}/sf-release
 
 %files
 %{_sysconfdir}/yum.repos.d/sf-release.repo
