@@ -2,12 +2,13 @@
 
 Name:           sf-release
 Version:        2.6
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
 URL:            https://softwarefactory-project.io/r/p/%{name}
 Source1:        sf-release.repo
+Source2:        RPM-GPG-KEY-SOFTWARE-FACTORY
 
 BuildArch:      noarch
 
@@ -24,13 +25,18 @@ Requires:       centos-release-scl-rh
 
 %install
 install -p -D -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/sf-release.repo
+install -p -D -m 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
 echo 2.6 > %{buildroot}%{_sysconfdir}/sf-release
 
 %files
 %{_sysconfdir}/yum.repos.d/sf-release.repo
+%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
 %{_sysconfdir}/sf-release
 
 %changelog
+* Thu Jul 20 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 2.6-5
+- Add gpg key
+
 * Tue Jul 11 2017 Fabien Boucher <fboucher@redhat.com> - 2.6-4
 - SF Release 2.6
 
