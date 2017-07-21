@@ -1,0 +1,8 @@
+Code-Review+2: Tristan de Cacqueray <tdecacqu@redhat.com>
+Workflow+1: Tristan de Cacqueray <tdecacqu@redhat.com>
+Verified+2: Jenkins CI <jenkins@softwarefactory-project.io>
+Submitted-by: Jenkins CI <jenkins@softwarefactory-project.io>
+Submitted-at: Fri, 21 Jul 2017 05:21:16 +0000
+Reviewed-on: https://softwarefactory-project.io/r/9029
+Project: software-factory/sf-release
+Branch: refs/heads/2.6
