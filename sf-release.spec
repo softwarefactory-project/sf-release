@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        9999
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -31,6 +31,9 @@ echo master > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Tue Aug 29 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-4
+- Update koji url
+
 * Mon Jun 19 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-3
 - Add scl-rh requirement
 
