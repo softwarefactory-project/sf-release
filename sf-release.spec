@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        9999
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -11,7 +11,7 @@ Source1:        sf-release.repo
 
 BuildArch:      noarch
 
-Requires:       centos-release-openstack-newton
+Requires:       centos-release-openstack-pike
 Requires:       centos-release-opstools
 Requires:       centos-release-scl-rh
 
@@ -31,6 +31,9 @@ echo master > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Sat Sep 30 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-5
+- Bump RDO requirements from newton to pike
+
 * Tue Aug 29 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-4
 - Update koji url
 
