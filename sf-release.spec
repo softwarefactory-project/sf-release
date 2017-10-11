@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        9999
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -31,6 +31,9 @@ echo master > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Wed Oct 11 2017 Fabien Boucher <fboucher@redhat.com> - 9999-6
+- Use the koji sf-master-el7-build tag instead of the mash one
+
 * Sat Sep 30 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-5
 - Bump RDO requirements from newton to pike
 
