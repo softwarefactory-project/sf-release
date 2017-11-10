@@ -1,13 +1,14 @@
 %global         sum The Software Factory project
 
 Name:           sf-release
-Version:        9999
-Release:        6%{?dist}
+Version:        2.7
+Release:        1%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
 URL:            https://softwarefactory-project.io/r/p/%{name}
 Source1:        sf-release.repo
+Source2:        RPM-GPG-KEY-SOFTWARE-FACTORY
 
 BuildArch:      noarch
 
@@ -24,13 +25,18 @@ Requires:       centos-release-scl-rh
 
 %install
 install -p -D -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/sf-release.repo
-echo master > %{buildroot}%{_sysconfdir}/sf-release
+install -p -D -m 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
+echo 2.7 > %{buildroot}%{_sysconfdir}/sf-release
 
 %files
 %{_sysconfdir}/yum.repos.d/sf-release.repo
+%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
 %{_sysconfdir}/sf-release
 
 %changelog
+* Mon Nov 13 2017 Fabien Boucher <fboucher@redhat.com> - 2.7-1
+- SF Release 2.7
+
 * Wed Oct 11 2017 Fabien Boucher <fboucher@redhat.com> - 9999-6
 - Use the koji sf-master-el7-build tag instead of the mash one
 

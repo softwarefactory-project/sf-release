@@ -1,5 +1,6 @@
-[sfrelease-master]
-name=SF master packages
-baseurl=http://38.145.34.53/kojifiles/repos/sf-master-el7-build/latest/x86_64/
+[sfrelease-2.7]
+name=SF 2.7 packages
+baseurl=http://38.145.34.53/kojifiles/repos/sf-2.7-el7-release
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
 gpgcheck=0
 enabled=1
