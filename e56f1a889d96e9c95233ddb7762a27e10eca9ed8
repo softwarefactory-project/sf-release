@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ad0253b_35775004",
+        "filename": "sf-release.repo",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-10T20:59:51Z",
+      "side": 1,
+      "message": "You should change the name too. Maybe look at the 2.6 branch to verify.",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "e56f1a889d96e9c95233ddb7762a27e10eca9ed8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
