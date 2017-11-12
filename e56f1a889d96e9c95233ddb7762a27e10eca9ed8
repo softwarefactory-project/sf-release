@@ -22,6 +22,30 @@
       "revId": "e56f1a889d96e9c95233ddb7762a27e10eca9ed8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ad0253b_f549d88f",
+        "filename": "sf-release.repo",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2017-11-12T02:50:28Z",
+      "side": 1,
+      "message": "Yes, sorry for that \u003d)",
+      "parentUuid": "5ad0253b_35775004",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "e56f1a889d96e9c95233ddb7762a27e10eca9ed8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
