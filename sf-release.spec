@@ -2,12 +2,13 @@
 
 Name:           sf-release
 Version:        9999
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
 URL:            https://softwarefactory-project.io/r/p/%{name}
 Source1:        sf-release.repo
+Source2:        RPM-GPG-KEY-SOFTWARE-FACTORY
 
 BuildArch:      noarch
 
@@ -28,9 +29,13 @@ echo master > %{buildroot}%{_sysconfdir}/sf-release
 
 %files
 %{_sysconfdir}/yum.repos.d/sf-release.repo
+%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
 %{_sysconfdir}/sf-release
 
 %changelog
+* Tue Nov 14 2017 Fabien Boucher <fboucher@redhat.com> - 9999-7
+- Add SF repository public key
+
 * Wed Oct 11 2017 Fabien Boucher <fboucher@redhat.com> - 9999-6
 - Use the koji sf-master-el7-build tag instead of the mash one
 
