@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        9999
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -11,10 +11,6 @@ Source1:        sf-release.repo
 Source2:        RPM-GPG-KEY-SOFTWARE-FACTORY
 
 BuildArch:      noarch
-
-Requires:       centos-release-openstack-pike
-Requires:       centos-release-opstools
-Requires:       centos-release-scl-rh
 
 %description
 %{sum}
@@ -34,6 +30,9 @@ echo master > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Mon Apr 9 2018 Nicolas Hicher <nhicher@redhat.com> - 9999-8
+- Remove depends (moved in sfconfig)
+
 * Tue Nov 14 2017 Fabien Boucher <fboucher@redhat.com> - 9999-7
 - Add SF repository public key
 
