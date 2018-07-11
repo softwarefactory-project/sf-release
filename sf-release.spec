@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        3.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -11,6 +11,9 @@ Source1:        sf-release.repo
 Source2:        RPM-GPG-KEY-SOFTWARE-FACTORY
 
 BuildArch:      noarch
+
+Requires:       centos-release-openstack-queens
+Requires:       centos-release-scl-rh
 
 %description
 %{sum}
@@ -30,6 +33,9 @@ echo 3.1 > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Wed Jul 11 2018 Fabien Boucher <fboucher@redhat.com> - 3.1-2
+- Re-add dependencies openstack-queens and scl.
+
 * Thu Jul 5 2018 Tristan Cacqueray <tdecacqu@redhat.com> - 3.1-1
 - Release 3.1
 
