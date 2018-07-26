@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        3.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -33,6 +33,9 @@ echo 3.1 > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Thu Jul 26 2018 Tristan Cacqueray <tdecacqu@redhat.com> - 3.1-3
+- Add missing gpgcheck to sf-release.repo
+
 * Wed Jul 11 2018 Fabien Boucher <fboucher@redhat.com> - 3.1-2
 - Re-add dependencies openstack-queens and scl.
 

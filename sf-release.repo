@@ -2,5 +2,5 @@
 name=SF 3.1 packages
 baseurl=https://softwarefactory-project.io/kojifiles/repos/sf-3.1-el7-release/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
-gpgcheck=0
+gpgcheck=1
 enabled=1
