@@ -1,8 +1,8 @@
 %global         sum The Software Factory project
 
 Name:           sf-release
-Version:        9999
-Release:        9%{?dist}
+Version:        3.2
+Release:        1%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -25,7 +25,7 @@ Requires:       centos-release-scl-rh
 %install
 install -p -D -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/sf-release.repo
 install -p -D -m 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
-echo master > %{buildroot}%{_sysconfdir}/sf-release
+echo 3.2 > %{buildroot}%{_sysconfdir}/sf-release
 
 %files
 %{_sysconfdir}/yum.repos.d/sf-release.repo
@@ -33,6 +33,9 @@ echo master > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Mon Nov 26 2018 Tristan Cacqueray <tdecacqu@redhat.com> - 3.2-1
+- 3.2 release
+
 * Thu Jul 12 2018 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-9
 - Re-add depends
 
