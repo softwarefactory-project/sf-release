@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        9999
-Release:        9%{?dist}
+Release:        10%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -12,8 +12,10 @@ Source2:        RPM-GPG-KEY-SOFTWARE-FACTORY
 
 BuildArch:      noarch
 
+%if 0%{?centos}
 Requires:       centos-release-openstack-queens
 Requires:       centos-release-scl-rh
+%endif
 
 %description
 %{sum}
@@ -33,6 +35,9 @@ echo master > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Wed Nov 28 2018 Nicolas Hicher <nhicher@redhat.com> - 9999-10
+- Ensure centos-release-* deps will be only installed on centos systems
+
 * Thu Jul 12 2018 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-9
 - Re-add depends
 
