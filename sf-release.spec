@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        9999
-Release:        9%{?dist}
+Release:        10%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -11,9 +11,6 @@ Source1:        sf-release.repo
 Source2:        RPM-GPG-KEY-SOFTWARE-FACTORY
 
 BuildArch:      noarch
-
-Requires:       centos-release-openstack-queens
-Requires:       centos-release-scl-rh
 
 %description
 %{sum}
@@ -33,6 +30,9 @@ echo master > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Wed Nov 28 2018 Nicolas Hicher <nhicher@redhat.com> - 9999-10
+- Remove centos only requirements
+
 * Thu Jul 12 2018 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-9
 - Re-add depends
 
