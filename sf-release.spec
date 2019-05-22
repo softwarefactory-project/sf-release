@@ -1,8 +1,8 @@
 %global         sum The Software Factory project
 
 Name:           sf-release
-Version:        9999
-Release:        10%{?dist}
+Version:        3.3
+Release:        1%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -22,7 +22,7 @@ BuildArch:      noarch
 %install
 install -p -D -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/sf-release.repo
 install -p -D -m 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
-echo master > %{buildroot}%{_sysconfdir}/sf-release
+echo 3.3 > %{buildroot}%{_sysconfdir}/sf-release
 
 %files
 %{_sysconfdir}/yum.repos.d/sf-release.repo
@@ -30,6 +30,9 @@ echo master > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Wed May 22 2019 Nicolas Hicher <nhicher@redhat.com> - 3.3-1
+- Release 3.3
+
 * Wed Nov 28 2018 Nicolas Hicher <nhicher@redhat.com> - 9999-10
 - Remove centos only requirements
 
