@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        3.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -30,6 +30,9 @@ echo 3.3 > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Wed May 22 2019 Nicolas Hicher <nhicher@redhat.com> - 3.3-2
+- Release 3.3
+
 * Wed May 22 2019 Nicolas Hicher <nhicher@redhat.com> - 3.3-1
 - Release 3.3
 
