@@ -2,13 +2,14 @@
 
 Name:           sf-release
 Version:        9999
-Release:        10%{?dist}
+Release:        11%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
 URL:            https://softwarefactory-project.io/r/p/%{name}
 Source1:        sf-release.repo
 Source2:        RPM-GPG-KEY-SOFTWARE-FACTORY
+Source3:        RPM-GPG-KEY-CentOS-SIG-SCLo-python35
 
 BuildArch:      noarch
 
@@ -22,14 +23,19 @@ BuildArch:      noarch
 %install
 install -p -D -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/sf-release.repo
 install -p -D -m 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
+install -p -D -m 0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo-python35
 echo master > %{buildroot}%{_sysconfdir}/sf-release
 
 %files
 %{_sysconfdir}/yum.repos.d/sf-release.repo
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
+%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo-python35
 %{_sysconfdir}/sf-release
 
 %changelog
+* Tue Sep 17 2019 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-11
+- Vendor the rh-python35 repository
+
 * Wed Nov 28 2018 Nicolas Hicher <nhicher@redhat.com> - 9999-10
 - Remove centos only requirements
 
