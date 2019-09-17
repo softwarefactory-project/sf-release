@@ -4,3 +4,10 @@ baseurl=https://softwarefactory-project.io/kojifiles/repos/sf-3.3-el7-release/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
 gpgcheck=1
 enabled=1
+
+[rh-python35-mirror]
+name=SF python35 mirror
+baseurl=https://softwarefactory-project.io/mirrors/rh-python35/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo-python35
+gpgcheck=1
+enabled=1
