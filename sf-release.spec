@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        9999
-Release:        11%{?dist}
+Release:        12%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -33,6 +33,9 @@ echo master > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Wed Sep 18 2019 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-12
+- Ensure mirror repos is picked first
+
 * Tue Sep 17 2019 Tristan Cacqueray <tdecacqu@redhat.com> - 9999-11
 - Vendor the rh-python35 repository
 
