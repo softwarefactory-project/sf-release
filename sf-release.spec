@@ -2,13 +2,14 @@
 
 Name:           sf-release
 Version:        3.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
 URL:            https://softwarefactory-project.io/r/p/%{name}
 Source1:        sf-release.repo
 Source2:        RPM-GPG-KEY-SOFTWARE-FACTORY
+Source3:        RPM-GPG-KEY-CentOS-SIG-SCLo-python35
 
 BuildArch:      noarch
 
@@ -25,14 +26,19 @@ Requires:       centos-release-scl-rh
 %install
 install -p -D -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/sf-release.repo
 install -p -D -m 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
+install -p -D -m 0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo-python35
 echo 3.2 > %{buildroot}%{_sysconfdir}/sf-release
 
 %files
 %{_sysconfdir}/yum.repos.d/sf-release.repo
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
+%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo-python35
 %{_sysconfdir}/sf-release
 
 %changelog
+* Tue Sep 17 2019 Tristan Cacqueray <tdecacqu@redhat.com> - 3.2-2
+- Vendor the rh-python35 repository
+
 * Mon Nov 26 2018 Tristan Cacqueray <tdecacqu@redhat.com> - 3.2-1
 - 3.2 release
 
