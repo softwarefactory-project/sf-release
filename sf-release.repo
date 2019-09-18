@@ -11,3 +11,10 @@ baseurl=https://softwarefactory-project.io/mirrors/rh-python35/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo-python35
 gpgcheck=1
 enabled=1
+
+[aopenstack-queens]
+name=SF queens mirror
+baseurl=https://softwarefactory-project.io/mirrors/openstack-queens/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
+gpgcheck=1
+enabled=1

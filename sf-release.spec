@@ -2,7 +2,7 @@
 
 Name:           sf-release
 Version:        3.2
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -10,6 +10,7 @@ URL:            https://softwarefactory-project.io/r/p/%{name}
 Source1:        sf-release.repo
 Source2:        RPM-GPG-KEY-SOFTWARE-FACTORY
 Source3:        RPM-GPG-KEY-CentOS-SIG-SCLo-python35
+Source4:        RPM-GPG-KEY-CentOS-SIG-Cloud
 
 BuildArch:      noarch
 
@@ -27,15 +28,20 @@ Requires:       centos-release-scl-rh
 install -p -D -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/sf-release.repo
 install -p -D -m 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
 install -p -D -m 0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo-python35
+install -p -D -m 0644 %{SOURCE4} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
 echo 3.2 > %{buildroot}%{_sysconfdir}/sf-release
 
 %files
 %{_sysconfdir}/yum.repos.d/sf-release.repo
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo-python35
+%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
 %{_sysconfdir}/sf-release
 
 %changelog
+* Thu Sep 19 2019 Tristan Cacqueray <tdecacqu@redhat.com> - 3.2-4
+- Add openstack-queens mirror
+
 * Wed Sep 18 2019 Tristan Cacqueray <tdecacqu@redhat.com> - 3.2-3
 - Ensure mirror repos is picked first
 
