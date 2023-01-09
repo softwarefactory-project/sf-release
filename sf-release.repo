@@ -1,6 +1,6 @@
-[sfrelease-master]
-name=SF master packages
-baseurl=https://softwarefactory-project.io/kojifiles/repos/sf-master-el7-build/latest/x86_64/
+[sfrelease-3.8]
+name=SF 3.8 packages
+baseurl=https://softwarefactory-project.io/kojifiles/repos/sf-3.8-el7-release/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-SOFTWARE-FACTORY
-gpgcheck=0
+gpgcheck=1
 enabled=1
