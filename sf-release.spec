@@ -1,7 +1,7 @@
 %global         sum The Software Factory project
 
 Name:           sf-release
-Version:        3.8
+Version:        3.8.0
 Release:        1%{?dist}
 Summary:        %{sum}
 
@@ -30,6 +30,9 @@ echo 3.8 > %{buildroot}%{_sysconfdir}/sf-release
 %{_sysconfdir}/sf-release
 
 %changelog
+* Mon Jan 10 2023 Fabien Boucher <fboucher@redhat.com> - 3.8.0-1
+- SF 3.8.0
+
 * Mon Jan 09 2023 Fabien Boucher <fboucher@redhat.com> - 3.8-1
 - Remove deprecated mirrors
 
